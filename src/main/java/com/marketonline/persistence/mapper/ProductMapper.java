@@ -6,7 +6,7 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-
+//commit branch
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {CategoryMapper.class})
