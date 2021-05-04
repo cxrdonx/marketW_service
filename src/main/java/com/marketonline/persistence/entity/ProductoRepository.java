@@ -4,16 +4,17 @@ import com.marketonline.domain.Product;
 import com.marketonline.domain.repository.ProductRepository;
 import com.marketonline.persistence.crud.ProductoCrudRepository;
 import com.marketonline.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     @Override
@@ -49,7 +50,10 @@ public class ProductoRepository implements ProductRepository {
         return null;
     }
 
-
+    @Override
+    public void delete(int idProducto){
+        productoCrudRepository.deleteById(idProducto);
+    }
 
     public Optional<Producto> getProducto(int idProducto){
         return productoCrudRepository.findById(idProducto);
@@ -58,8 +62,6 @@ public class ProductoRepository implements ProductRepository {
     public Producto save(Producto producto){
         return productoCrudRepository.save(producto);
     }
-//branch
-    public void delete(int idProducto){
-        productoCrudRepository.deleteById(idProducto);
-    }
+
+
 }
