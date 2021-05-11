@@ -15,8 +15,9 @@ import org.mapstruct.Mapping;
                 @Mapping(source = "descripcion", target = "category"),
                 @Mapping(source = "estado", target = "active"),
         })
+        Category toCategory(Categoria categoria);
         @InheritInverseConfiguration //lo equivalente a Categoria toCategoria(Category category);
         @Mapping(target = "productos", ignore = true)  // productos existe en categoria pero no en category, entonces ignoramos
-        Category toCategory(Categoria categoria);
+        Categoria toCategoria(Category category);
     }
 

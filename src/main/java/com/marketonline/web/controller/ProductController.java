@@ -4,6 +4,7 @@ import com.marketonline.domain.Product;
 import com.marketonline.domain.repository.ProductRepository;
 import com.marketonline.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class ProductController {
            return productService.getAll();
     }
 
+    @GetMapping("/all")
      public Optional<Product>getProduct(int productId){
             return productService.getProduct(productId);
      }

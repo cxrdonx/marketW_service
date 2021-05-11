@@ -22,7 +22,7 @@ public class Producto {
     private boolean estado;
 
   @ManyToOne
-  @JoinColumn(name = "id_categoria", insertable = false, updatable = true)
+  @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
   private Categoria categoria;
 
     public Integer getIdProducto() {
