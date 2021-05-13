@@ -14,7 +14,7 @@ public class Producto {
     @Column(name = "id_categoria")
     private Integer idCategoria;
     @Column(name = "codigo_barras")
-    private Integer codigoBarras;
+    private String codigoBarras;
     @Column(name = "precio_venta")
     private BigDecimal precioVenta;
     @Column(name = "cantidad_stock")
@@ -49,11 +49,11 @@ public class Producto {
         this.idCategoria = idCategoria;
     }
 
-    public Integer getCodigoBarras() {
+    public String getCodigoBarras() {
         return codigoBarras;
     }
 
-    public void setCodigoBarras(Integer codigoBarras) {
+    public void setCodigoBarras(String codigoBarras) {
         this.codigoBarras = codigoBarras;
     }
 
@@ -79,5 +79,13 @@ public class Producto {
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }

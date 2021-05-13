@@ -1,8 +1,9 @@
-package com.marketonline.persistence.entity;
+package com.marketonline.persistence;
 
 import com.marketonline.domain.Product;
 import com.marketonline.domain.repository.ProductRepository;
 import com.marketonline.persistence.crud.ProductoCrudRepository;
+import com.marketonline.persistence.entity.Producto;
 import com.marketonline.persistence.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,11 +26,6 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getByCategory(int categoryId) {
-        List<Producto> productos = productoCrudRepository.findByIdCategoria(categoryId);
-        return Optional.of(mapper.toProducts(productos));
-    }
-    @Override
-    public Optional<List<Product>>getByCategoriaOrderByNombreAsc(int categoryId) {
         List<Producto> productos = productoCrudRepository.findByIdCategoriaOrderByNombreAsc(categoryId);
         return Optional.of(mapper.toProducts(productos));
     }
