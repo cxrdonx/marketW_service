@@ -10,28 +10,51 @@ de datos de una tienda.
 - [@cxrdonx](https://www.github.com/cxrdonx)
 
   
-## API Reference
+## API Reference with products example
 
-#### Get all items
+#### Get all products
 
 ```http
-  GET /api/items
+  GET /market-api/products/all
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+|   `all`   | `int`    | **Required**. Your API key |
 
-#### Get item
+#### Get product
 
 ```http
-  GET /api/items/${id}
+  GET /market-api/products/{id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| `id`      | `int`    | **Required**. Id of item to fetch |
 
+#### get product by category
 
+```http
+  GET /market-api/products/category/{id}
+```
+
+|   Parameter   | Type     | Description                       |
+|   :--------   | :------- | :-------------------------------- |
+| `categoryId`  | `int`    | **Required**. Id of item to fetch |
+
+#### Save a product
+
+```http
+  POST /market-api/products/save
+```
+
+#### Delete a product
+```http
+  DELETE /market-api/products/delete/{id}
+```
+
+|   Parameter   | Type     | Description                       |
+|   :--------   | :------- | :-------------------------------- |
+|     `id `     | `int`    | **Required**. Id of item to delete |
 
   
