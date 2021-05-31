@@ -24,8 +24,8 @@ public class CompraRepository implements PurchaseRepository {
     @Override
     public Optional<List<Purchase>> getByClient(String clientId) {
         return compraCrudRepository.findByIdcliente(clientId).map(compras -> mapper.toPurchases(compras));
+         //.map operate into optional, if optional is empty the method don eject
     }
-
     @Override
     public Purchase save(Purchase purchase) {
         Compra compra = mapper.toCompra(purchase);
