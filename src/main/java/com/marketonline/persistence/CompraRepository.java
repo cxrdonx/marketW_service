@@ -1,7 +1,7 @@
 package com.marketonline.persistence;
 
 import com.marketonline.domain.repository.PurchaseRepository;
-import com.marketonline.domain.service.Purchase;
+import com.marketonline.domain.Purchase;
 import com.marketonline.persistence.crud.CompraCrudRepository;
 import com.marketonline.persistence.entity.Compra;
 import com.marketonline.persistence.mapper.PurchaseMapper;

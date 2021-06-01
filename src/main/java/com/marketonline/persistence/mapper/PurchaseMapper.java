@@ -1,12 +1,11 @@
 package com.marketonline.persistence.mapper;
 
-import com.marketonline.domain.service.Purchase;
+import com.marketonline.domain.Purchase;
 import com.marketonline.persistence.entity.Compra;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

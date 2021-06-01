@@ -1,4 +1,4 @@
-package com.marketonline.domain.service;
+package com.marketonline.domain;
 
 public class client {
     private String id;

@@ -1,4 +1,6 @@
-package com.marketonline.domain.service;
+package com.marketonline.domain;
+
+import com.marketonline.domain.service.PurchaseItem;
 
 import java.time.LocalDateTime;
 import java.util.List;

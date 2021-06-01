@@ -1,6 +1,6 @@
 package com.marketonline.domain.repository;
 
-import com.marketonline.domain.service.Purchase;
+import com.marketonline.domain.Purchase;
 
 import java.util.List;
 import java.util.Optional;
