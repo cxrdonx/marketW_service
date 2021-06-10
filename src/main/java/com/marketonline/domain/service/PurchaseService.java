@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PurchaseServiceE {
+public class PurchaseService {
     @Autowired
     private PurchaseRepository purchaseRepository;
     public List<Purchase> getAll(){

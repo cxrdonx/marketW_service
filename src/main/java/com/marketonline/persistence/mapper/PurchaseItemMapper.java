@@ -14,7 +14,7 @@ import org.mapstruct.Mappings;
 public interface PurchaseItemMapper {
 
     @Mappings({
-            @Mapping(source ="id.Producto", target ="productId" ),
+            @Mapping(source ="id.idProducto", target ="productId" ),
             @Mapping(source = "cantidad", target = "quantity"),
               //total same name in PurchaseItem and ComptasProducto and dont include in mapping
             @Mapping(source ="estado", target = "active")
